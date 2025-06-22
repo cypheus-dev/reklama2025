@@ -859,7 +859,7 @@
     </div>
 
     <script>
-        // Rozbudowana baza pytań z wariantami i różnymi typami
+        // Rozbudowana baza pytań bez modułów propagandy i marketingu społecznego
         const questionBank = [
             // Pytania z wariantami - system losowo wybierze jeden wariant
             {
@@ -1005,23 +1005,6 @@
                 ]
             },
             
-            // Marketing społeczny - multiple choice
-            {
-                category: "Marketing społeczny",
-                type: "multiple",
-                question: "Które z poniższych są charakterystyczne dla reklamy społecznej w porównaniu z komercyjną?",
-                answers: [
-                    "Często ma charakter awersyjny",
-                    "Korzyści są często odległe w czasie",
-                    "Zawsze jest tańsza w produkcji",
-                    "Odnosi się do głęboko zakorzenionych postaw",
-                    "Wykorzystuje tylko argumentację racjonalną"
-                ],
-                correct: [0, 1, 3],
-                explanation: "Reklama społeczna często ma charakter awersyjny (smutny, przerażający), korzyści bywają odległe w czasie, a postawy do których się odnosi są głęboko zakorzenione w tradycji i wartościach.",
-                hint: "Pomyśl o kampaniach społecznych które widziałeś - czym się różniły od reklam produktów?"
-            },
-            
             // Product placement - true/false
             {
                 category: "Product placement",
@@ -1030,15 +1013,6 @@
                 correct: false,
                 explanation: "Fałsz. Istnieją ścisłe ograniczenia - zakaz dotyczy m.in. serwisów informacyjnych, audycji dla dzieci, religijnych, publicystycznych o tematyce społeczno-politycznej.",
                 hint: "Czy w wiadomościach widzisz oznaczenia o lokowaniu produktu?"
-            },
-            
-            // Propaganda - fill blank
-            {
-                category: "Propaganda",
-                type: "fill-blank",
-                question: "Technika propagandowa '_____ pęd' polega na sugerowaniu, że wszyscy tak robią, więc ty też powinieneś. Natomiast '_____ kłamstwo' to powtarzanie nieprawdy aż stanie się 'prawdą'.",
-                blanks: ["owczy", "wielkie"],
-                explanation: "Owczy pęd wykorzystuje presję grupy, a wielkie kłamstwo (big lie) opiera się na mechanizmie familiarności - wielokrotne powtórzenie sprawia, że ludzie zaczynają wierzyć."
             },
             
             // Więcej pytań z różnymi typami...
@@ -1112,15 +1086,6 @@
             },
             
             {
-                category: "Marketing społeczny",
-                type: "true-false",
-                question: "CSR (Corporate Social Responsibility) i marketing społeczny to dokładnie to samo.",
-                correct: false,
-                explanation: "Fałsz. CSR to społeczna odpowiedzialność biznesu - element strategii firmy. Marketing społeczny to wykorzystanie technik marketingu dla celów społecznych. CSR może być elementem marketingu społecznego, ale nie są tożsame.",
-                hint: "CSR to działania firm, marketing społeczny to szerszy proces zmian społecznych."
-            },
-            
-            {
                 category: "Segmentacja",
                 type: "single",
                 variants: [
@@ -1150,19 +1115,132 @@
             },
             
             {
-                category: "Propaganda",
+                category: "Marketing i reklama",
+                type: "single",
+                variants: [
+                    {
+                        question: "Jaka jest różnica między marką a produktem?",
+                        answers: [
+                            "Marka to nazwa, produkt to fizyczny przedmiot",
+                            "Marka to wyobrażenie o produkcie, produkt to fizyczny obiekt",
+                            "Nie ma różnicy",
+                            "Marka jest droższa od produktu"
+                        ],
+                        correct: 1,
+                        explanation: "Marka to wyobrażenie, opinia i postrzeganie produktu przez konsumentów, podczas gdy produkt to fizyczny obiekt lub usługa."
+                    },
+                    {
+                        question: "Co oznacza termin 'rozszerzenie marki'?",
+                        answers: [
+                            "Zwiększenie produkcji",
+                            "Wprowadzenie nowych produktów pod istniejącą marką",
+                            "Powiększenie opakowania",
+                            "Zmiana nazwy marki"
+                        ],
+                        correct: 1,
+                        explanation: "Rozszerzenie marki to wprowadzenie nowych produktów (często z innych kategorii) pod już znaną i uznaną marką, np. odkurzacze Xiaomi czy płyny Ludwik."
+                    }
+                ]
+            },
+            
+            {
+                category: "Psychologia reklamy",
+                type: "true-false",
+                question: "Reklama jest najbardziej skuteczna po pierwszym kontakcie z produktem.",
+                correct: false,
+                explanation: "Fałsz. Reklama jest NAJBARDZIEJ skuteczna PRZED pierwszym kontaktem z produktem. Po wypróbowaniu produktu większe znaczenie mają jakość, cena i doświadczenie użytkownika.",
+                hint: "Kiedy reklama ma największy wpływ na nasze decyzje?"
+            },
+            
+            {
+                category: "Cykl życia produktu",
                 type: "multiple",
-                question: "Które z poniższych są technikami manipulacyjnymi stosowanymi w propagandzie?",
+                question: "Które etapy wchodzą w skład cyklu życia produktu?",
                 answers: [
-                    "Przenoszenie autorytetu",
-                    "Owczy pęd",
-                    "Uczciwa argumentacja",
-                    "Wielkie kłamstwo",
-                    "Strach"
+                    "Wprowadzenie",
+                    "Negocjacje",
+                    "Wzrost",
+                    "Dojrzałość",
+                    "Spadek"
                 ],
-                correct: [0, 1, 3, 4],
-                explanation: "Propaganda stosuje: przenoszenie (wykorzystanie autorytetu), owczy pęd (presja grupy), wielkie kłamstwo (powtarzanie nieprawdy) i strach (kreowanie zagrożenia). Uczciwa argumentacja nie jest techniką manipulacyjną.",
-                hint: "Manipulacja to nieuczciwość - które techniki są nieuczciwe?"
+                correct: [0, 2, 3, 4],
+                explanation: "Cykl życia produktu składa się z czterech etapów: wprowadzenie (nowy produkt), wzrost (szybki wzrost sprzedaży), dojrzałość (stabilizacja) i spadek (malenie sprzedaży).",
+                hint: "Pomyśl o naturalnym cyklu rozwoju - od narodzin do końca."
+            },
+            
+            {
+                category: "Kanały dystrybucji",
+                type: "fill-blank",
+                question: "Dystrybucja _____ to sprzedaż bezpośrednio od producenta do konsumenta, podczas gdy dystrybucja _____ wykorzystuje pośredników jak hurtownie czy detalistów.",
+                blanks: ["bezpośrednia", "pośrednia"],
+                explanation: "Dystrybucja bezpośrednia eliminuje pośredników (np. sprzedaż online przez producenta), a dystrybucja pośrednia wykorzystuje hurtowników, detalistów i inne ogniwa pośrednie."
+            },
+            
+            {
+                category: "Rodzaje komunikowania",
+                type: "single",
+                variants: [
+                    {
+                        question: "Komunikowanie interpersonalne to:",
+                        answers: [
+                            "Komunikowanie przez media",
+                            "Komunikowanie bezpośrednie między osobami",
+                            "Komunikowanie grupowe",
+                            "Komunikowanie masowe"
+                        ],
+                        correct: 1,
+                        explanation: "Komunikowanie interpersonalne to bezpośrednia komunikacja między osobami, bez pośrednictwa mediów czy innych osób."
+                    },
+                    {
+                        question: "Które z poniższych jest cechą komunikowania jednokierunkowego?",
+                        answers: [
+                            "Istnieje sprzężenie zwrotne",
+                            "Odbiorca może odpowiedzieć nadawcy",
+                            "Brak sprzężenia zwrotnego",
+                            "Wszyscy uczestnicy mają równe prawa"
+                        ],
+                        correct: 2,
+                        explanation: "Komunikowanie jednokierunkowe charakteryzuje się brakiem sprzężenia zwrotnego - nadawca wysyła komunikat, ale nie otrzymuje natychmiastowej odpowiedzi od odbiorcy."
+                    }
+                ]
+            },
+            
+            {
+                category: "Budowa przekazu reklamowego",
+                type: "true-false",
+                question: "Argumentacja dwustronna w reklamie pokazuje tylko zalety produktu.",
+                correct: false,
+                explanation: "Fałsz. Argumentacja dwustronna pokazuje zarówno zalety jak i wady (słabości) produktu. Jest skuteczna dla sceptycznych odbiorców, bo zwiększa wiarygodność.",
+                hint: "Dwustronna oznacza dwie strony - co to może znaczyć?"
+            },
+            
+            {
+                category: "Psychologia reklamy",
+                type: "single",
+                variants: [
+                    {
+                        question: "Kiedy reklama jest najbardziej skuteczna?",
+                        answers: [
+                            "Po zakupie produktu",
+                            "Przed pierwszym kontaktem z produktem",
+                            "W trakcie używania produktu",
+                            "Po roku używania produktu"
+                        ],
+                        correct: 1,
+                        explanation: "Reklama jest najbardziej skuteczna przed pierwszym kontaktem z produktem, gdy konsument podejmuje decyzję o wypróbowaniu. Później większe znaczenie ma doświadczenie."
+                    },
+                    {
+                        question: "Co to jest 'reguła prawej ręki' w psychologii sprzedaży?",
+                        answers: [
+                            "Podawanie ręki prawą ręką",
+                            "Umieszczanie promowanego produktu po prawej stronie lidera",
+                            "Pisanie prawą ręką",
+                            "Pokazywanie produktu prawą ręką"
+                        ],
+                        correct: 1,
+                        explanation: "Reguła prawej ręki to technika umieszczania promowanego produktu po prawej stronie od lidera branży, bo większość ludzi lepiej postrzega produkty po prawej stronie."
+                    }
+                ]
             }
         ];
 
@@ -1388,79 +1466,6 @@
             showLoginScreen();
         }
 
-        // Modyfikacja funkcji startTest
-        const originalStartTest = startTest;
-        startTest = function() {
-            if (sessionStorage.getItem('userRole') === 'admin') {
-                if (!confirm('Jako administrator rozpoczynasz test. Wynik zostanie zapisany w statystykach. Kontynuować?')) {
-                    return;
-                }
-            }
-            originalStartTest();
-        };
-
-        // Modyfikacja funkcji finishTest
-        const originalFinishTest = finishTest;
-        finishTest = function() {
-            clearInterval(timerInterval);
-            closeModal();
-            
-            // Zapisz wynik w statystykach
-            const totalQuestions = currentQuestions.length;
-            const correctAnswers = calculateScore();
-            const percentage = Math.round((correctAnswers / totalQuestions) * 100);
-            const timeSpent = Math.floor((Date.now() - testStartTime) / 1000);
-            
-            // Zapisz lokalnie
-            saveTestResult(percentage, timeSpent, selectedCategories, selectedDifficulty, totalQuestions);
-            
-            // Wyślij do Google Forms (działa w tle)
-            sendToGoogleForms(percentage, timeSpent, selectedCategories, selectedDifficulty, totalQuestions);
-            
-            showResults();
-        };
-
-        // Funkcja wysyłająca wyniki do Google Forms
-        function sendToGoogleForms(score, timeSpent, categories, difficulty, questionCount) {
-            // ID formularza
-            const FORM_ID = '1FAIpQLSd1c1GThwCtvYPPTkuX9mGzT2fNQqbjUbgFAcLMd9hDFo1FCw';
-            const FORM_URL = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
-            
-            // Przygotuj dane
-            const minutes = Math.floor(timeSpent / 60);
-            const seconds = timeSpent % 60;
-            const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            const dateString = new Date().toLocaleString('pl-PL');
-            
-            // Mapowanie poziomów trudności na polski
-            const difficultyMap = {
-                'easy': 'łatwy',
-                'medium': 'średni',
-                'hard': 'trudny'
-            };
-            
-            // ID pól formularza (pobrane z pre-filled link)
-            const formData = new FormData();
-            formData.append('entry.1954519085', dateString); // Data i czas
-            formData.append('entry.620842263', score.toString()); // Wynik procentowy
-            formData.append('entry.398843149', timeString); // Czas trwania
-            formData.append('entry.1638000047', categories.join(', ')); // Kategorie
-            formData.append('entry.1116600267', difficultyMap[difficulty] || difficulty); // Poziom trudności
-            formData.append('entry.1445809399', questionCount.toString()); // Liczba pytań
-            
-            // Wyślij dane w tle (użytkownik tego nie zobaczy)
-            fetch(FORM_URL, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors' // Ważne! Pozwala wysłać dane bez problemów z CORS
-            }).then(() => {
-                console.log('Wynik został zapisany w Google Forms');
-            }).catch(error => {
-                // Ignoruj błędy - nie chcemy przerywać testu
-                console.log('Nie udało się wysłać wyniku do formularza');
-            });
-        }
-
         // Funkcja do losowania wariantu pytania
         function selectQuestionVariant(questionData) {
             if (questionData.variants) {
@@ -1517,6 +1522,8 @@
                     </div>
                     
                     <button class="btn" onclick="startTest()">Rozpocznij Test</button>
+                    
+                    ${sessionStorage.getItem('userRole') === 'admin' ? '<button class="btn btn-secondary" onclick="showAdminPanel()" style="margin-left: 10px;">Panel Admin</button>' : ''}
                 </div>
             `;
             
@@ -1944,7 +1951,61 @@
         function finishTest() {
             clearInterval(timerInterval);
             closeModal();
+            
+            // Zapisz wynik w statystykach
+            const totalQuestions = currentQuestions.length;
+            const correctAnswers = calculateScore();
+            const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+            const timeSpent = Math.floor((Date.now() - testStartTime) / 1000);
+            
+            // Zapisz lokalnie
+            saveTestResult(percentage, timeSpent, selectedCategories, selectedDifficulty, totalQuestions);
+            
+            // Wyślij do Google Forms (działa w tle)
+            sendToGoogleForms(percentage, timeSpent, selectedCategories, selectedDifficulty, totalQuestions);
+            
             showResults();
+        }
+
+        // Funkcja wysyłająca wyniki do Google Forms
+        function sendToGoogleForms(score, timeSpent, categories, difficulty, questionCount) {
+            // ID formularza
+            const FORM_ID = '1FAIpQLSd1c1GThwCtvYPPTkuX9mGzT2fNQqbjUbgFAcLMd9hDFo1FCw';
+            const FORM_URL = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
+            
+            // Przygotuj dane
+            const minutes = Math.floor(timeSpent / 60);
+            const seconds = timeSpent % 60;
+            const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            const dateString = new Date().toLocaleString('pl-PL');
+            
+            // Mapowanie poziomów trudności na polski
+            const difficultyMap = {
+                'easy': 'łatwy',
+                'medium': 'średni',
+                'hard': 'trudny'
+            };
+            
+            // ID pól formularza (pobrane z pre-filled link)
+            const formData = new FormData();
+            formData.append('entry.1954519085', dateString); // Data i czas
+            formData.append('entry.620842263', score.toString()); // Wynik procentowy
+            formData.append('entry.398843149', timeString); // Czas trwania
+            formData.append('entry.1638000047', categories.join(', ')); // Kategorie
+            formData.append('entry.1116600267', difficultyMap[difficulty] || difficulty); // Poziom trudności
+            formData.append('entry.1445809399', questionCount.toString()); // Liczba pytań
+            
+            // Wyślij dane w tle (użytkownik tego nie zobaczy)
+            fetch(FORM_URL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Ważne! Pozwala wysłać dane bez problemów z CORS
+            }).then(() => {
+                console.log('Wynik został zapisany w Google Forms');
+            }).catch(error => {
+                // Ignoruj błędy - nie chcemy przerywać testu
+                console.log('Nie udało się wysłać wyniku do formularza');
+            });
         }
 
         // Obliczanie wyników dla różnych typów pytań
@@ -2217,4 +2278,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
